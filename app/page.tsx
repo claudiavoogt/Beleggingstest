@@ -203,8 +203,8 @@ export default function BeleggenProfieltest() {
       <div className="pf-wrap">
         <div className="pf-banner">
           <div className="pf-banner-tag">Rebel in Finance</div>
-          <div className="pf-banner-title">Is beleggen iets voor jou?</div>
-          <div className="pf-banner-sub">Doe de test. Ontdek je profiel.</div>
+          <div className="pf-banner-title">Doe de beleggingstest</div>
+          <div className="pf-banner-sub">Doe de test en ontdek je profiel.</div>
         </div>
 
         {laden ? (
