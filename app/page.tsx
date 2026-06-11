@@ -116,7 +116,7 @@ export default function BeleggenProfieltest() {
     if (current === questions.length - 1) {
       setLaden(true);
       try {
-        const res = await fetch("/.netlify/functions/profiel", {
+        const res = await fetch("/api/profiel", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ answers }),
@@ -192,8 +192,12 @@ export default function BeleggenProfieltest() {
         .pf-cta-block { background: linear-gradient(135deg, #B72452, #6B2D84); border-radius: 12px; padding: 28px 24px; text-align: center; }
         .pf-cta-title { font-family: 'Montserrat', sans-serif; font-size: 17px; font-weight: 800; color: #fff; margin-bottom: 8px; }
         .pf-cta-sub { font-family: 'Lora', serif; font-style: italic; color: rgba(255,255,255,0.8); font-size: 14px; margin-bottom: 20px; }
-        .pf-cta-btn { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; color: #B72452; background: #fff; border: none; border-radius: 8px; padding: 13px 32px; cursor: pointer; letter-spacing: 1px; text-transform: uppercase; }
+        .pf-cta-btn { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; color: #B72452; background: #fff; border: none; border-radius: 8px; padding: 13px 32px; cursor: pointer; letter-spacing: 1px; text-transform: uppercase; display: inline-block; text-decoration: none; }
         .pf-restart { display: block; text-align: center; margin-top: 20px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 600; color: #888; cursor: pointer; letter-spacing: 1px; text-transform: uppercase; background: none; border: none; width: 100%; }
+        .pf-footer { background: linear-gradient(135deg, #1A1F36 0%, #6B2D84 100%); padding: 24px 20px; text-align: center; margin-top: 8px; }
+        .pf-footer p { font-family: 'Lora', serif; font-size: 13px; color: rgba(255,255,255,0.7); margin: 0; }
+        .pf-footer a { color: #2e8999; text-decoration: underline; }
+        .pf-footer-copy { margin-top: 6px; opacity: 0.65; font-size: 11px; }
       `}</style>
 
       <div className="pf-wrap">
@@ -271,7 +275,7 @@ export default function BeleggenProfieltest() {
               <div className="pf-cta-block">
                 <div className="pf-cta-title">{result.ctaTitle}</div>
                 <div className="pf-cta-sub">{result.ctaSub}</div>
-                <button className="pf-cta-btn">Ja, ik wil meer weten</button>
+                <a className="pf-cta-btn" href="https://claudiavoogt.nl/investeren-kun-je-leren/" target="_blank" rel="noopener noreferrer">Ja, ik wil meer weten</a>
               </div>
               <button className="pf-restart" onClick={restart}>
                 ↺ Doe de test opnieuw
@@ -279,6 +283,18 @@ export default function BeleggenProfieltest() {
             </div>
           </>
         )}
+
+        <footer className="pf-footer">
+          <p>
+            <a href="https://claudiavoogt.nl" target="_blank" rel="noopener noreferrer">
+              claudiavoogt.nl
+            </a>
+            {' '}— Beleggingsexpert &amp; investeringsmentor
+          </p>
+          <p className="pf-footer-copy">
+            © {new Date().getFullYear()} Claudia Voogt. Alle rechten voorbehouden. Deze tool mag niet worden gekopieerd, nagebouwd of hergebruikt zonder schriftelijke toestemming.
+          </p>
+        </footer>
       </div>
     </>
   );

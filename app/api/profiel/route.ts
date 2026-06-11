@@ -1,6 +1,6 @@
-import type { Handler } from "@netlify/functions";
+import { NextRequest, NextResponse } from 'next/server';
 
-// --- SCORINGSLOGICA EN PROFIELEN: server-side, nooit zichtbaar in de browser ---
+// --- SCORINGSLOGICA EN PROFIELEN: server-side, niet zichtbaar in de browser ---
 
 const questions = [
   { scores: [0, 2, 3, 1] },
@@ -65,7 +65,7 @@ const profiles = [
   },
 ];
 
-function berekenProfiel(answers: number[]) {
+function berekenProfiel(answers: (number | null)[]) {
   const total = answers.reduce(
     (s: number, a, i) => s + (a !== null && a !== undefined ? questions[i].scores[a] : 0),
     0
@@ -79,28 +79,17 @@ function berekenProfiel(answers: number[]) {
   return profiles[3];
 }
 
-// --- Netlify handler ---
-
-export const handler: Handler = async (event) => {
-  if (event.httpMethod !== "POST") {
-    return { statusCode: 405, body: "Method Not Allowed" };
-  }
-
+export async function POST(request: NextRequest) {
   try {
-    const { answers } = JSON.parse(event.body || "{}");
+    const { answers } = await request.json();
 
     if (!Array.isArray(answers) || answers.length !== questions.length) {
-      return { statusCode: 400, body: "Ongeldige invoer" };
+      return NextResponse.json({ error: 'Ongeldige invoer' }, { status: 400 });
     }
 
     const profiel = berekenProfiel(answers);
-
-    return {
-      statusCode: 200,
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(profiel),
-    };
+    return NextResponse.json(profiel);
   } catch {
-    return { statusCode: 500, body: "Serverfout" };
+    return NextResponse.json({ error: 'Serverfout' }, { status: 500 });
   }
-};
+}
