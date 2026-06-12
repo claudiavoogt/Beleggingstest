@@ -198,7 +198,7 @@ export default function BeleggenProfieltest() {
         .pf-footer { background: linear-gradient(135deg, #1A1F36 0%, #6B2D84 100%); padding: 24px 20px; text-align: center; margin-top: 8px; }
         .pf-footer p { font-family: 'Lora', serif; font-size: 13px; color: rgba(255,255,255,0.7); margin: 0; }
         .pf-footer a { color: #2e8999; text-decoration: underline; }
-        .pf-footer-copy { margin-top: 6px; opacity: 0.65; font-size: 11px; }
+        .pf-footer-copy { margin-top: 6px; color: #ffffff; opacity: 0.9; font-size: 11px; }
       `}</style>
 
       <div className="pf-wrap">
@@ -293,7 +293,7 @@ export default function BeleggenProfieltest() {
             {' '}— Beleggingsexpert &amp; investeringsmentor
           </p>
           <p className="pf-footer-copy">
-            © {new Date().getFullYear()} Claudia Voogt. Alle rechten voorbehouden. Deze tool mag niet worden gekopieerd, nagebouwd of hergebruikt zonder schriftelijke toestemming.
+            © 2026 Claudia Voogt. Alle rechten voorbehouden. Deze tool mag niet worden gedeeld, gekopieerd, nagebouwd of hergebruikt zonder schriftelijke toestemming.
           </p>
         </footer>
       </div>
