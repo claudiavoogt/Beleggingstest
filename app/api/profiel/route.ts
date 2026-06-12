@@ -10,8 +10,8 @@ const questions = [
   { scores: [0, 2, 3, 1] },
   { scores: [0, 2, 3, 1] },
   { scores: [0, 2, 3, 1] },
-  { scores: [0, 2, 3, 1] },
-  { scores: [2, 1, 3, 1] },
+  { scores: [0, 2, 3, 1, 3] },
+  { scores: [0, 1, 3, 2] },
 ];
 
 const profiles = [
@@ -54,7 +54,7 @@ const profiles = [
   {
     name: "De Zelfdoener",
     sub: "Je belégt al. Maar je hebt geen strategie.",
-    desc: "Jij doet het al. Je hebt een broker, je koopt ETFs of aandelen, je volgt de markt. Maar diep van binnen weet je dat je op gevoel handelt. Je koopt als iets in de buurt is en verkoopt als je onrustig wordt. Er is geen plan. Geen duidelijke strategie. En dat kost je rendementen. Niet omdat je dom bent, maar omdat niemand je ooit heeft geleerd hoe je het systematisch aanpakt.",
+    desc: "Jij doet het al. Je hebt een broker, je koopt ETFs of aandelen, je volgt de markt. Maar diep van binnen weet je dat je op gevoel handelt. Er is geen plan. Geen duidelijke strategie. En dat kost je rendementen. Niet omdat je dom bent, maar omdat niemand je ooit heeft geleerd hoe je het systematisch aanpakt.",
     strengths: [
       "Je hebt de eerste drempel al genomen die de meeste mensen tegenhoudt.",
       "Je hebt ervaring en dat is meer waard dan je denkt.",

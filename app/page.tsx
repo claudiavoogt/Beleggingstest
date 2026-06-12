@@ -74,15 +74,16 @@ const questions = [
       "Geen idee waar ik moet starten.",
       "Ik heb geen strategie en gooi er maar wat in.",
       "Ik vind het te onzeker vergeleken met sparen.",
+      "Niks, ik beleg al. Deze vraag raakt me niet meer.",
     ],
   },
   {
-    q: "Wat zou het voor jou betekenen als jouw geld harder voor jou werkt?",
+    q: "Stel je dat je binnen 1 maand een bewezen beleggingsstrategie zou leren die super makkelijk te volgen is (zelfs als je geen cijferwonder bent) en die je maar 1 uurtje per jaar tijd zou kosten. Wat verandert er dan voor jou?",
     opts: [
-      "Vrijheid. Minder afhankelijk zijn van mijn inkomen.",
-      "Eindelijk echt iets opbouwen in plaats van alleen bewaren.",
-      "Mijn portefeuille laten groeien met een echte strategie.",
-      "Rust. Weten dat mijn toekomst financieel geregeld is.",
+      "Ik durf eindelijk te beginnen, in plaats van erover te blijven lezen.",
+      "Mijn spaargeld gaat eindelijk iets doen in plaats van stilstaan.",
+      "Ik stop met random kopen en volg eindelijk een plan, mijn rendement gaat omhoog.",
+      "Ik heb voor het eerst overzicht en rust, ik weet wat ik doe en waarom.",
     ],
   },
 ];
